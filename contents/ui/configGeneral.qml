@@ -107,64 +107,6 @@ Kirigami.FormLayout {
     }
 
     QQC2.CheckBox {
-        text: "Show battery"
-        checked: cfg_showBattery
-
-        onToggled: {
-            cfg_showBattery = checked
-        }
-    }
-
-    RowLayout {
-        QQC2.Label {
-            text: "Warning level:"
-        }
-
-        QQC2.SpinBox {
-            from: 1
-            to: 100
-            value: cfg_batteryWarning
-
-            onValueModified: {
-                cfg_batteryWarning = value
-            }
-        }
-
-        QQC2.Label {
-            text: "%"
-        }
-    }
-
-    RowLayout {
-        QQC2.Label {
-            text: "Critical level:"
-        }
-
-        QQC2.SpinBox {
-            from: 1
-            to: 100
-            value: cfg_batteryCritical
-
-            onValueModified: {
-                cfg_batteryCritical = value
-            }
-        }
-
-        QQC2.Label {
-            text: "%"
-        }
-    }
-
-    QQC2.CheckBox {
-        text: "Show red border at critical level"
-        checked: cfg_batteryCriticalBorder
-
-        onToggled: {
-            cfg_batteryCriticalBorder = checked
-        }
-    }
-
-    QQC2.CheckBox {
         id: showBattery
 
         Kirigami.FormData.label: "Battery:"
