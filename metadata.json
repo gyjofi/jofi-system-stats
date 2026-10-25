@@ -2,12 +2,15 @@
   "KPlugin": {
     "Id": "hu.jofi.systemstats",
     "Name": "Jofi System Stats",
-    "Description": "Minimal system statistics for the Plasma System Tray",
+    "Description": "A lightweight, text-only system monitor for the KDE Plasma panel",
     "Version": "1.1.0",
     "License": "MIT",
+    "Website": "https://github.com/gyjofi/jofi-system-stats",
+    "BugReportUrl": "https://github.com/gyjofi/jofi-system-stats/issues",
     "Authors": [
       {
-        "Name": "Jofi"
+        "Name": "Jofi",
+        "Email": "gyjofi@users.noreply.github.com"
       }
     ]
   },
