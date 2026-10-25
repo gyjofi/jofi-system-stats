@@ -1,0 +1,16 @@
+{
+  "KPlugin": {
+    "Id": "hu.jofi.systemstats",
+    "Name": "Jofi System Stats",
+    "Description": "Minimal system statistics for the Plasma System Tray",
+    "Version": "1.1.0",
+    "License": "MIT",
+    "Authors": [
+      {
+        "Name": "Jofi"
+      }
+    ]
+  },
+  "KPackageStructure": "Plasma/Applet",
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+
+    <kcfgfile name=""/>
+
+    <group name="General">
+
+        <entry name="showCpu" type="Bool">
+            <default>true</default>
+        </entry>
+
+        <entry name="showRam" type="Bool">
+            <default>true</default>
+        </entry>
+
+        <entry name="showTemperature" type="Bool">
+            <default>true</default>
+        </entry>
+
+        <entry name="showDownload" type="Bool">
+            <default>true</default>
+        </entry>
+
+        <entry name="showUpload" type="Bool">
+            <default>true</default>
+        </entry>
+
+        <entry name="updateInterval" type="Int">
+            <default>1000</default>
+        </entry>
+
+        <entry name="separator" type="String">
+            <default>│</default>
+        </entry>
+
+        <entry name="fontSize" type="Int">
+            <default>10</default>
+        </entry>
+
+        <entry name="showBattery" type="Bool">
+            <default>true</default>
+        </entry>
+
+        <entry name="batteryWarning" type="Int">
+            <default>30</default>
+        </entry>
+
+        <entry name="batteryCritical" type="Int">
+            <default>15</default>
+        </entry>
+
+        <entry name="batteryCriticalBorder" type="Bool">
+            <default>true</default>
+        </entry>
+
+    </group>
+
+</kcfg>
