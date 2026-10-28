@@ -41,6 +41,40 @@ PlasmoidItem {
         return Kirigami.Theme.positiveTextColor
     }
 
+    function batterySignBackgroundColor() {
+        if (!Plasmoid.configuration.saveBatterySign) {
+            return "transparent"
+        }
+
+        const battery = Number(batterySensor.value)
+
+        if (battery > 80) {
+            return "green"
+        }
+
+        if (battery < 30) {
+            return "orange"
+        }
+
+        return "transparent"
+    }
+
+    function batterySignTextColor() {
+        if (Plasmoid.configuration.saveBatterySign) {
+            const battery = Number(batterySensor.value)
+
+            if (battery > 80) {
+                return "white"
+            }
+
+            if (battery < 30) {
+                return "black"
+            }
+        }
+
+        return root.batteryColor()
+    }
+
     function batteryText() {
         if (root.batterySensorBase.length === 0) return ""
 
@@ -239,13 +273,26 @@ PlasmoidItem {
                 verticalAlignment: Text.AlignVCenter
             }
 
-            Text {
-                visible: Plasmoid.configuration.showBattery && root.batterySensorBase.length > 0
-                text: root.batteryText()
-                color: root.batteryColor()
+            Rectangle {
+                id: batteryIndicator
 
-                font.pointSize: Plasmoid.configuration.fontSize
-                verticalAlignment: Text.AlignVCenter
+                visible: Plasmoid.configuration.showBattery && root.batterySensorBase.length > 0
+                color: root.batterySignBackgroundColor()
+                radius: 3
+
+                implicitWidth: batteryTextLabel.implicitWidth + (color === "transparent" ? 0 : 6)
+                implicitHeight: batteryTextLabel.implicitHeight + (color === "transparent" ? 0 : 2)
+
+                Text {
+                    id: batteryTextLabel
+
+                    anchors.centerIn: parent
+                    text: root.batteryText()
+                    color: root.batterySignTextColor()
+
+                    font.pointSize: Plasmoid.configuration.fontSize
+                    verticalAlignment: Text.AlignVCenter
+                }
             }
         }
 

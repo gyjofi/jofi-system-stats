@@ -18,6 +18,7 @@ Kirigami.FormLayout {
     property alias cfg_batteryWarning: batteryWarning.value
     property alias cfg_batteryCritical: batteryCritical.value
     property alias cfg_batteryCriticalBorder: batteryCriticalBorder.checked
+    property alias cfg_saveBatterySign: saveBatterySign.checked
 
     QQC2.CheckBox {
         id: showCpu
@@ -152,5 +153,12 @@ Kirigami.FormLayout {
 
         Kirigami.FormData.label: "Critical warning:"
         text: "Show red border"
+    }
+
+    QQC2.CheckBox {
+        id: saveBatterySign
+
+        Kirigami.FormData.label: "Battery safe sign:"
+        text: "Show battery safe sign"
     }
 }
